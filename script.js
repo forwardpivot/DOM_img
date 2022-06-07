@@ -4,9 +4,9 @@ const blue = document.querySelector('#blue');
 const orange = document.querySelector('#orange');
 
 const redChange = document.querySelector('.redChange');
-const yellowChange = document.querySelector('#yellowChange');
-const blueChange = document.querySelector('#blueChange');
-const orangeChange = document.querySelector('#orangeChange');
+const yellowChange = document.querySelector('.yellowChange');
+const blueChange = document.querySelector('.blueChange');
+const orangeChange = document.querySelector('.orangeChange');
 let toggle = true;
 
 red.addEventListener('click', () => {
@@ -37,5 +37,31 @@ redChange.addEventListener('click', () => {
     } else {
         redChange.src = "img/red.jpeg";
     }
-})
+});
+
+yellowChange.addEventListener('click', () => {
+    if (yellowChange.classList.toggle('yellow')) {
+        yellowChange.src = "img/orange.jpeg";
+    } else {
+        yellowChange.src = "img/yellow.jpeg";
+    }
+});
+
+blueChange.addEventListener('click', () => {
+    if (blueChange.classList.toggle('blue')) {
+        blueChange.src = "img/red.jpeg";
+     } else {
+         blueChange.src = "img/blue.jpeg";
+     }
+});
+
+orangeChange.addEventListener('click', () => {
+    if (orangeChange.classList.toggle('orange')) {
+        orangeChange.src = "img/yellow.jpeg";
+    } else {
+        orangeChange.src = "img/orange.jpeg";
+    }
+});
+
+
 
