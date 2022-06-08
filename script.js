@@ -71,7 +71,7 @@ timerBtn.addEventListener('click', timer);
 
 function timer() {
     let sec = 5;
-    const redTimer = document.querySelector('redTimer');
+    const redTimer = document.querySelector('.redTimer');
     let timer = setInterval( () => {
         sec--;
         if (sec < 0 && redTimer.classList.toggle('red')) {
