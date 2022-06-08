@@ -70,17 +70,18 @@ timerBtn.addEventListener('click', timer);
 
 
 function timer() {
-    let sec = 5;
+    let timerStart = +prompt("How long is the countdown(seconds)", 5);
+    let sec = timerStart;
     const redTimer = document.querySelector('.redTimer');
     let timer = setInterval( () => {
         console.log(sec);
         sec--;
         if (sec <= 0 && redTimer.classList.toggle(!'red')) {
             redTimer.src = "img/blue.jpeg";
-            sec = 5;
+            sec = timerStart;
         } else if (sec <= 0) {
             redTimer.src = "img/red.jpeg";
-            sec = 5;
+            sec = timerStart;
         }
     }, 1000);
 }
