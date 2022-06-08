@@ -63,5 +63,18 @@ orangeChange.addEventListener('click', () => {
     }
 });
 
+/*Dealing with the timer thing*/
+const timerBtn = document.querySelector('.timerBtn');
+timerBtn.addEventListener('click', timer);
 
 
+
+function timer() {
+    let sec = 5;
+    let timer = setInterval( () => {
+        sec--;
+        if (sec < 0) {
+            document.querySelector('.redTimer').src = "img/blue.jpeg";
+        }
+    }, 1000);
+}
