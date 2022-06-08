@@ -67,7 +67,13 @@ orangeChange.addEventListener('click', () => {
 const timerBtn = document.querySelector('.timerBtn');
 timerBtn.addEventListener('click', timer);
 
-
+/**
+ * I want to try, and change the timer to work no matter the sqaure that is clicked. 
+ * I'll add the squares of course.
+ * function(e) gives info about what was clicked, so i think I might be able to get the
+ * id or class of a button, and then use a switch(e) statement to check the attribute, and
+ * run the right one.
+ */
 
 function timer() {
     let timerStart = +prompt("How long is the countdown(seconds)", 5);
