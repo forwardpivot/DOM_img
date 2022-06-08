@@ -75,10 +75,10 @@ function timer() {
     let timer = setInterval( () => {
         console.log(sec);
         sec--;
-        if (sec < 0 && redTimer.classList.toggle(!'red')) {
+        if (sec <= 0 && redTimer.classList.toggle(!'red')) {
             redTimer.src = "img/blue.jpeg";
             sec = 5;
-        } else if (sec < 0) {
+        } else if (sec <= 0) {
             redTimer.src = "img/red.jpeg";
             sec = 5;
         }
