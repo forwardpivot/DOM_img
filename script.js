@@ -71,10 +71,15 @@ timerBtn.addEventListener('click', timer);
 
 function timer() {
     let sec = 5;
+    const redTimer = document.querySelector('redTimer');
     let timer = setInterval( () => {
         sec--;
-        if (sec < 0) {
-            document.querySelector('.redTimer').src = "img/blue.jpeg";
+        if (sec < 0 && redTimer.classList.toggle('red')) {
+            redTimer.src = "img/blue.jpeg";
+            sec = 5;
+        } else if (sec < 0) {
+            redTimer.src = "img/red.jpeg";
+            sec = 5;
         }
     }, 1000);
 }
