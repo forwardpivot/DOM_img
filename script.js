@@ -73,6 +73,7 @@ function timer() {
     let sec = 5;
     const redTimer = document.querySelector('.redTimer');
     let timer = setInterval( () => {
+        console.log(sec);
         sec--;
         if (sec < 0 && redTimer.classList.toggle('red')) {
             redTimer.src = "img/blue.jpeg";
