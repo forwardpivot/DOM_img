@@ -110,8 +110,8 @@ function timer(e) {
     let sec = timerStart;
 
     let timer = setInterval( () => {
-        sec--;
         console.log(sec);
+        sec--;
         switch(sec <= 0) {
             // The Cases for the red square
             case classList.contains('redTimer'):

@@ -1,0 +1,9 @@
+h1 {
+    font-size: 25px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
