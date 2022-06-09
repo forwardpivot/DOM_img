@@ -104,8 +104,7 @@ function timer(e) {
     let timer = setInterval( () => {
         console.log(sec);
         sec--;
-        switch(classList) {
-            case sec <= 0: 
+        switch(sec <= 0) {
             case classList.contains('redTimer'):
                 if (sec <= 0 && redTimer.classList.toggle(!'red')) {
                     redTimer.src = "img/blue.jpeg";
@@ -115,7 +114,6 @@ function timer(e) {
                     sec = timerStart
                 }
                 break;
-            default: console.log(classList);
         }
     }, 1000);
 }
