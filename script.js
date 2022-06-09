@@ -99,14 +99,15 @@ function timer(e) {
     const classList = e.target.classList;
     let timerStart = +prompt("How long before the square change color?", 3);
     let sec = timerStart;
-    console.log(classList.contains('red'));
+    console.log(classList.contains('redTimer'));
 
     let timer = setInterval( () => {
         console.log(sec);
         sec--;
         switch(classList) {
-            case 'redTimer':
-                if (sec <= 0 && redTimer.classList.toggle('red')) {
+            case sec <= 0: 
+            case classList.contains('redTimer'):
+                if (sec <= 0 && redTimer.classList.toggle(!'red')) {
                     redTimer.src = "img/blue.jpeg";
                     sec = timerStart;
                 } else if (sec <= 0) {
@@ -114,6 +115,7 @@ function timer(e) {
                     sec = timerStart
                 }
                 break;
+            default: console.log(classList);
         }
     }, 1000);
 }
