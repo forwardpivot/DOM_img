@@ -7,3 +7,11 @@ div {
     justify-content: center;
     gap: 5px;
 }
+
+.timerBtn {
+    background: hsl(221, 44%, 7%);
+    color: white;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin-left: 20px;
+}

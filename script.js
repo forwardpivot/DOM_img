@@ -63,10 +63,6 @@ orangeChange.addEventListener('click', () => {
     }
 });
 
-/*Dealing with the timer thing*/
-// const timerBtn = document.querySelector('.timerBtn');
-// timerBtn.addEventListener('click', timer);
-
 /**
  * I want to try, and change the timer to work no matter the sqaure that is clicked. 
  * I'll add the squares of course.
@@ -91,24 +87,30 @@ orangeChange.addEventListener('click', () => {
 //         }
 //     }, 1000);
 // }
-
 const redTimer = document.querySelector('.redTimer');
-redTimer.addEventListener('click', timer);
+redTimer.addEventListener('click', countdown);
 const yellowTimer = document.querySelector('.yellowTimer');
 const blueTimer = document.querySelector('.blueTimer');
 const orangeTimer = document.querySelector('.orangeTimer');
-yellowTimer.addEventListener('click', timer);
-blueTimer.addEventListener('click', timer);
-orangeTimer.addEventListener('click', timer);
+yellowTimer.addEventListener('click', countdown);
+blueTimer.addEventListener('click', countdown);
+orangeTimer.addEventListener('click', countdown);
 
+//Stops the countdown interval
+//var timer;
+const timerBtn = document.querySelector('.timerBtn');
+timerBtn.addEventListener('click', stop);
 
+function stop() {
+    for(i= 0; i < 100; i++)
+    window.clearInterval(i);
+    console.log("The stop button was clicked")
+}
 
-
-function timer(e) {
+function countdown(e) {
     const classList = e.target.classList;
     let timerStart = +prompt("How long before the square change color?", 3);
     let sec = timerStart;
-
     let timer = setInterval( () => {
         console.log(sec);
         sec--;
