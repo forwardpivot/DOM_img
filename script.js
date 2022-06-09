@@ -119,10 +119,10 @@ function timer(e) {
                 }
                 break;
             case classList.contains('yellowTimer'):
-                if (yellowTimer.classList.toggle('yellow')) {
+                if (sec <= 0 && yellowTimer.classList.toggle('yellow')) {
                     yellowTimer.src = "img/orange.jpeg";
                     sec = timerStart;
-                } else {
+                } else if (sec <= 0) {
                     yellowTimer.src = "img/yellow.jpeg";
                     sec = timerStart;
                 }
