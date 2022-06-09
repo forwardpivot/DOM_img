@@ -64,8 +64,8 @@ orangeChange.addEventListener('click', () => {
 });
 
 /*Dealing with the timer thing*/
-const timerBtn = document.querySelector('.timerBtn');
-timerBtn.addEventListener('click', timer);
+// const timerBtn = document.querySelector('.timerBtn');
+// timerBtn.addEventListener('click', timer);
 
 /**
  * I want to try, and change the timer to work no matter the sqaure that is clicked. 
@@ -75,19 +75,28 @@ timerBtn.addEventListener('click', timer);
  * run the right one.
  */
 
-function timer() {
-    let timerStart = +prompt("How long is the countdown(seconds)", 5);
-    let sec = timerStart;
-    const redTimer = document.querySelector('.redTimer');
-    let timer = setInterval( () => {
-        console.log(sec);
-        sec--;
-        if (sec <= 0 && redTimer.classList.toggle(!'red')) {
-            redTimer.src = "img/blue.jpeg";
-            sec = timerStart;
-        } else if (sec <= 0) {
-            redTimer.src = "img/red.jpeg";
-            sec = timerStart;
-        }
-    }, 1000);
+// function timer() {
+//     let timerStart = +prompt("How long is the countdown(seconds)", 5);
+//     let sec = timerStart;
+//     const redTimer = document.querySelector('.redTimer');
+//     let timer = setInterval( () => {
+//         console.log(sec);
+//         sec--;
+//         if (sec <= 0 && redTimer.classList.toggle(!'red')) {
+//             redTimer.src = "img/blue.jpeg";
+//             sec = timerStart;
+//         } else if (sec <= 0) {
+//             redTimer.src = "img/red.jpeg";
+//             sec = timerStart;
+//         }
+//     }, 1000);
+// }
+
+const redTimer = document.querySelector('.redTimer');
+redTimer.addEventListener('click', timer);
+
+function timer(e) {
+    // let timerStart = +prompt("How long before the square change color?", 3);
+    // let sec = timerStart;
+    console.log(e.target.classList);
 }
