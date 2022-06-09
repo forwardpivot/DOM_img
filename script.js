@@ -94,16 +94,20 @@ orangeChange.addEventListener('click', () => {
 
 const redTimer = document.querySelector('.redTimer');
 redTimer.addEventListener('click', timer);
+const yellowTimer = document.querySelector('.yellowTimer');
+const blueTimer = document.querySelector('.blueTimer');
+const orangeTimer = document.querySelector('.orangeTimer');
+yellowTimer.addEventListener('click', timer);
+
 
 function timer(e) {
     const classList = e.target.classList;
     let timerStart = +prompt("How long before the square change color?", 3);
     let sec = timerStart;
-    console.log(classList.contains('redTimer'));
 
     let timer = setInterval( () => {
-        console.log(sec);
         sec--;
+        console.log(sec);
         switch(sec <= 0) {
             case classList.contains('redTimer'):
                 if (sec <= 0 && redTimer.classList.toggle(!'red')) {
@@ -112,6 +116,15 @@ function timer(e) {
                 } else if (sec <= 0) {
                     redTimer.src = "img/red.jpeg";
                     sec = timerStart
+                }
+                break;
+            case classList.contains('yellowTimer'):
+                if (yellowTimer.classList.toggle('yellow')) {
+                    yellowTimer.src = "img/orange.jpeg";
+                    sec = timerStart;
+                } else {
+                    yellowTimer.src = "img/yellow.jpeg";
+                    sec = timerStart;
                 }
                 break;
         }
