@@ -98,6 +98,10 @@ const yellowTimer = document.querySelector('.yellowTimer');
 const blueTimer = document.querySelector('.blueTimer');
 const orangeTimer = document.querySelector('.orangeTimer');
 yellowTimer.addEventListener('click', timer);
+blueTimer.addEventListener('click', timer);
+orangeTimer.addEventListener('click', timer);
+
+
 
 
 function timer(e) {
@@ -109,6 +113,7 @@ function timer(e) {
         sec--;
         console.log(sec);
         switch(sec <= 0) {
+            // The Cases for the red square
             case classList.contains('redTimer'):
                 if (sec <= 0 && redTimer.classList.toggle(!'red')) {
                     redTimer.src = "img/blue.jpeg";
@@ -118,6 +123,7 @@ function timer(e) {
                     sec = timerStart
                 }
                 break;
+                //The cases for the yellow square
             case classList.contains('yellowTimer'):
                 if (sec <= 0 && yellowTimer.classList.toggle('yellow')) {
                     yellowTimer.src = "img/orange.jpeg";
@@ -127,6 +133,25 @@ function timer(e) {
                     sec = timerStart;
                 }
                 break;
+                //The cases for the blue square
+            case classList.contains('blueTimer'):
+                if (sec <= 0 && blueTimer.classList.toggle('blue')) {
+                    blueTimer.src = "img/red.jpeg";
+                    sec = timerStart;
+                } else if (sec <= 0) {
+                    blueTimer.src = "img/blue.jpeg";
+                    sec = timerStart
+                }
+                break;
+                // The cases for the orange square
+            case classList.contains('orangeTimer'):
+                if (sec <= 0 && orangeTimer.classList.toggle('orange')) {
+                    orangeTimer.src = "img/yellow.jpeg";
+                    sec = timerStart;
+                } else if (sec <= 0) {
+                    orangeTimer.src = "img/orange.jpeg";
+                    sec = timerStart;
+                }
         }
     }, 1000);
 }
