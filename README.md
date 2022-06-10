@@ -8,3 +8,5 @@ How I use logic is very important for loops
 I feel a little more comfortable using arrow functions
 
 This was just practice with that being said I should use comments more
+
+I also learned how to use google. Super fun
